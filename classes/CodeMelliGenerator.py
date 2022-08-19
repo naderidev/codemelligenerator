@@ -52,7 +52,7 @@ class CodeMelliGenerator:
             f'# ' \
             f'remaining modes: {(all_modes - counter)} '
         if execute_time and (counter == all_modes):
-            text += f'# execute time: {round(execute_time, 1)} seconds ' if execute_time else ''
+            text += f'# execute time: {round(execute_time, 1)} seconds '
         print(f"{text}\r", end='')
 
     # returns the remainder division
