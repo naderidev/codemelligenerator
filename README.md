@@ -1,8 +1,8 @@
 # Code Melli Generator
-code melli generator is a python class for generating iranian national code by area code
+code melli generator is a python class for generating iranian national code by area code.
 
-# Instalation
-to install the app you should just download the project directly or you can clone it
+# Installation
+to install the script you should just download the project directly or you can clone it.
 ### clone
 ````shell
 git clone https://github.com/naderidev/codemelligenerator
@@ -15,16 +15,16 @@ from classes.CodeMelliGenerator import CodeMelliGenerator
 # replace 011 with your area code
 cmg = CodeMelliGenerator(area_code='011', print_status_live=True)
 
-# generate and prints the status
+# generate codes and prints the status
 cmg.generate()
 
-# prints generated codes array
+# prints all generated codes in an array
 print(cmg.get_codes())
 
-# prints all checked modes
+# prints the amount of all checked modes
 print(cmg.all_modes)
 
-# prints all valid modes (which modes that is a valid national code)
+# prints the amount of all valid modes (which modes that is a valid national code)
 print(cmg.valid_modes)
 ````
 
