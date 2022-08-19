@@ -14,7 +14,7 @@ class CodeMelliGenerator:
     all_modes: int = 0
     valid_modes: int = 0
 
-    def __init__(self, area_code: int, print_status_live: bool = False):
+    def __init__(self, area_code: str | int, print_status_live: bool = False):
         self.__area_code: str = str(area_code)
         self.__print_status_live = print_status_live
 
@@ -24,6 +24,7 @@ class CodeMelliGenerator:
         counter = 0
         valid_modes = 0
         start_time = time.time()
+        print('Starting...')
         for number in itertools.product("0123456789", repeat=(10 - len(self.__area_code))):
             number = [*(self.__area_code + ("".join(number)))]
             remainder = self.__remainder(number)
@@ -31,10 +32,10 @@ class CodeMelliGenerator:
             result = None
             if remainder < 2:
                 if remainder == control_number:
-                    result = int("".join(number))
+                    result = "".join(number)
             else:
                 if control_number == str((11 - remainder)):
-                    result = int("".join(number))
+                    result = "".join(number)
             counter += 1
             if result:
                 valid_modes += 1

@@ -10,9 +10,10 @@ from classes.CodeMelliGenerator import CodeMelliGenerator
 
 if __name__ == '__main__':
     print(__doc__)
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser()
+
     required = parser.add_argument_group('required arguments')
-    required.add_argument('-a', '--areacode', type=int, help='area code', required=True)
+    required.add_argument('-a', '--areacode', type=str, help='area code [numerical]', required=True)
     required.add_argument('-s', '--save', type=str, help='file path for save codes', required=True)
 
     notrequired = parser.add_argument_group('not required arguments')
