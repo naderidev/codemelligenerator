@@ -34,7 +34,7 @@ class CodeMelliGenerator:
                 if remainder == control_number:
                     result = "".join(number)
             else:
-                if control_number == str((11 - remainder)):
+                if control_number == (11 - remainder):
                     result = "".join(number)
             counter += 1
             if result:
